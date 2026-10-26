@@ -23,7 +23,7 @@ window.TD_CONFIG = {
      While it is empty, the site uses the starter list in data/products.csv.
      See HOW_TO_UPDATE_PRODUCTS.md for step-by-step instructions.
      -------------------------------------------------------------------- */
-  productsSheetCsvUrl: "",
+  productsSheetCsvUrl: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRgP4T463B6FNq8_bOK4jLfUGSKE_VVn8yQ8LGSd-mATz7EYVgdzQHjY6ze9TRMI-qTG4v63wzsG7F0/pub?gid=0&single=true&output=csv",
   localProductsCsv: "data/products.csv",
 
   occasions: [
