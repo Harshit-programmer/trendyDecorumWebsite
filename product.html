@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | Trendy Decorum</title>
+  <meta name="description" content="Handcrafted Indian festive home décor item. Handpicked in India, available for pickup in Oshawa or delivery across Canada and USA.">
+  <link rel="icon" type="image/jpeg" href="assets/brand/favicon.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="shop">
+
+  <!-- Site Header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Trendy Decorum Home">
+        <img src="assets/brand/logo.jpg" alt="Trendy Decorum Logo" width="50" height="50">
+        <span class="brand-name">Trendy Decorum</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main Navigation">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="shop.html" data-nav="shop">Collection</a>
+        <a href="index.html#festivals">Festivals</a>
+        <a href="index.html#bulk">Bulk & Pre-Orders</a>
+        <a href="about.html" data-nav="about">Our Story</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-outline btn-sm header-wa" data-wa aria-label="Order on WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41Z"/></svg>
+          <span>Chat with Monika</span>
+        </a>
+
+        <button class="list-btn" id="open-list-btn" aria-label="View Order List">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l1 13H5L6 7Z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg>
+          <span class="list-count" data-list-count>0</span>
+        </button>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Product Detail Section -->
+  <main class="pd" id="product-main">
+    <div class="container" id="product-container">
+      <p style="text-align: center; color: var(--muted); padding: 80px 0;">Loading product details...</p>
+    </div>
+  </main>
+
+  <!-- Related Products Section -->
+  <section class="section section-tight related" id="related-section" style="display: none; background: var(--paper);">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Pair With</div>
+        <h2 class="section-title">You May Also <em>Love</em></h2>
+        <div class="ornament">✦</div>
+      </div>
+      <div class="product-grid" id="related-grid"></div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand">
+          <img src="assets/brand/logo.jpg" alt="Trendy Decorum" width="46" height="46">
+          <span class="brand-name">Trendy Decorum</span>
+        </div>
+        <p>
+          Handcrafted Indian home décor, Pichwai hangings, festive torans, and ethnic return gifts. Handpicked from India, serving Canadian homes.
+        </p>
+        <div class="socials">
+          <a data-wa aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41Z"/></svg></a>
+          <a data-ig aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a data-tel aria-label="Phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Collection</h4>
+        <ul>
+          <li><a href="shop.html?cat=Shubh+Labh">Shubh Labh Hangings</a></li>
+          <li><a href="shop.html?cat=Torans">Festive Torans</a></li>
+          <li><a href="shop.html?cat=Door+%26+Wall+Hangings">Wall &amp; Door Latkans</a></li>
+          <li><a href="shop.html?cat=Garlands+%26+Florals">Garlands &amp; Florals</a></li>
+          <li><a href="shop.html?cat=Wall+D%C3%A9cor">Wall Accents</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Festivals</h4>
+        <ul>
+          <li><a href="shop.html?occ=Diwali">Diwali 2026 Collection</a></li>
+          <li><a href="shop.html?occ=Navratri">Navratri Garba Décor</a></li>
+          <li><a href="shop.html?occ=Karva+Chauth">Karva Chauth</a></li>
+          <li><a href="shop.html?occ=Weddings">Weddings &amp; Haldi</a></li>
+          <li><a href="index.html#bulk">Bulk &amp; Pre-Orders</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact &amp; Delivery</h4>
+        <ul>
+          <li><span>📍 Pickup: <strong data-location>Oshawa, Ontario</strong></span></li>
+          <li><span>🇨🇦 Delivery: Canada &amp; USA wide</span></li>
+          <li><a data-tel>📞 <span data-phone>(647) 781-4940</span></a></li>
+          <li><a data-ig>📸 <span data-ig-handle>@trendy_decorum</span></a></li>
+          <li><span>💳 Payment: Cash / e-Transfer</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>&copy; <span data-year>2026</span> Trendy Decorum. All rights reserved. Handcrafted with devotion.</div>
+      <div>Curated by Monika · Oshawa, Ontario, Canada</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      const container = document.getElementById("product-container");
+      const params = new URLSearchParams(window.location.search);
+      const productId = params.get("id");
+
+      let allProducts = [];
+      try {
+        allProducts = await TD.loadProducts();
+      } catch (err) {
+        container.innerHTML = `<p style="text-align: center; color: var(--muted); padding: 60px 0;">Error loading products: ${TDUI.esc(err.message)}</p>`;
+        return;
+      }
+
+      const product = allProducts.find(p => p.id === productId) || allProducts[0];
+
+      if (!product) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <div class="big">🪔</div>
+            <h3>Product not found</h3>
+            <p>We couldn't find the requested piece. It might have been updated or sold out.</p>
+            <a href="shop.html" class="btn btn-dark">Browse Full Collection</a>
+          </div>`;
+        return;
+      }
+
+      // Update document title & metadata
+      document.title = `${product.name} | Trendy Decorum`;
+
+      let selectedSize = product.sizes && product.sizes.length ? product.sizes[0] : null;
+      let currentQty = 1;
+
+      function getEffectivePrice() {
+        if (selectedSize && selectedSize.price != null) return selectedSize.price;
+        return product.price;
+      }
+
+      function renderProduct() {
+        const effectivePrice = getEffectivePrice();
+        const priceDisplay = effectivePrice != null ? TD.money(effectivePrice) : "Message for price";
+
+        const tagsHtml = product.occasions.map(occ =>
+          `<a href="shop.html?occ=${encodeURIComponent(occ)}">✨ ${TDUI.esc(occ)}</a>`
+        ).join("");
+
+        const sizesHtml = product.sizes && product.sizes.length > 0 ? `
+          <span class="opt-label">Select Option / Size:</span>
+          <div class="size-opts" id="size-options">
+            ${product.sizes.map((s, idx) => `
+              <button class="size-opt ${selectedSize === s ? 'active' : ''}" data-idx="${idx}">
+                <b>${TDUI.esc(s.label)}</b>
+                <span>${s.price != null ? TD.money(s.price) : 'Contact'}</span>
+              </button>
+            `).join("")}
+          </div>
+        ` : "";
+
+        const thumbsHtml = product.images.length > 1 ? `
+          <div class="gallery-thumbs" id="gallery-thumbs">
+            ${product.images.map((img, idx) => `
+              <button class="${idx === 0 ? 'active' : ''}" data-img="${TDUI.esc(img)}">
+                <img src="${TDUI.esc(img)}" alt="${TDUI.esc(product.name)} thumbnail ${idx + 1}">
+              </button>
+            `).join("")}
+          </div>
+        ` : "";
+
+        container.innerHTML = `
+          <div class="breadcrumb dark">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <a href="shop.html">Catalogue</a>
+            <span>/</span>
+            <a href="shop.html?cat=${encodeURIComponent(product.category)}">${TDUI.esc(product.category)}</a>
+            <span>/</span>
+            <span>${TDUI.esc(product.name)}</span>
+          </div>
+
+          <div class="pd-grid">
+            <!-- Gallery -->
+            <div class="gallery">
+              <div class="gallery-main" id="gallery-main">
+                <img id="main-image" src="${TDUI.esc(product.images[0])}" alt="${TDUI.esc(product.name)}">
+                ${product.badge ? `<span class="badge" style="position: absolute; top: 16px; left: 16px;">${TDUI.esc(product.badge)}</span>` : ''}
+                ${!product.inStock ? `<span class="badge soldout" style="position: absolute; top: 16px; right: 16px;">Sold Out</span>` : ''}
+              </div>
+              ${thumbsHtml}
+            </div>
+
+            <!-- Product Info -->
+            <div class="pd-info">
+              <div class="card-cat">${TDUI.esc(product.category)}</div>
+              <h1>${TDUI.esc(product.name)}</h1>
+
+              <div class="pd-price">
+                <span class="price" id="pd-price-val">${priceDisplay}</span>
+                <span class="note">CAD · Taxes &amp; delivery calculated on WhatsApp</span>
+              </div>
+
+              <div class="pd-desc">
+                <p>${TDUI.esc(product.description || "Handcrafted decorative accent made with devotion. Perfect for elevating festive ambience at doors, walls, pooja rooms, and celebratory occasions.")}</p>
+              </div>
+
+              ${sizesHtml}
+
+              <div class="pd-qty" style="margin-top: 24px;">
+                <span class="opt-label" style="margin: 0; min-width: 60px;">Quantity:</span>
+                <div class="qty">
+                  <button id="qty-dec" aria-label="Decrease quantity">−</button>
+                  <span id="qty-val">${currentQty}</span>
+                  <button id="qty-inc" aria-label="Increase quantity">+</button>
+                </div>
+              </div>
+
+              <div class="pd-actions">
+                <button class="btn btn-gold btn-lg btn-block" id="btn-add-list">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M6 7h12l1 13H5L6 7Z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg>
+                  <span>Add to Order List</span>
+                </button>
+
+                <a class="btn btn-whatsapp btn-lg btn-block" id="btn-order-wa" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41Z"/></svg>
+                  <span>Order on WhatsApp</span>
+                </a>
+              </div>
+
+              <div class="pd-perks">
+                <div class="pd-perk">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.5 2 7.5L12 17l-6.5 4 2-7.5L2 9h7z"/></svg>
+                  <div><strong>Imported from India</strong><br><small style="color:var(--muted)">Curated artisanal handicrafts</small></div>
+                </div>
+                <div class="pd-perk">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <div><strong>Pickup in Oshawa, ON</strong><br><small style="color:var(--muted)">Delivery across Canada &amp; USA</small></div>
+                </div>
+              </div>
+
+              ${tagsHtml ? `
+                <div style="margin-top: 26px;">
+                  <span class="opt-label">Ideal For Occasions:</span>
+                  <div class="tags">${tagsHtml}</div>
+                </div>
+              ` : ''}
+
+              <div style="margin-top: 26px; padding: 18px 20px; background: var(--paper); border-radius: 14px; border: 1px dashed var(--line);">
+                <strong style="color: var(--gold-deep); display: block; margin-bottom: 4px;">🎉 Need this in Bulk or for an Event?</strong>
+                <p style="font-size: 0.92rem; color: var(--muted); margin: 0;">We take bulk pre-orders for weddings, return gifts, temple functions, and retail stores with customized quantity rates. <a href="index.html#bulk" style="color: var(--maroon); text-decoration: underline;">Inquire about bulk pricing &rarr;</a></p>
+              </div>
+            </div>
+          </div>
+        `;
+
+        updateWaLink();
+        wireInteractions();
+      }
+
+      function updateWaLink() {
+        const effectivePrice = getEffectivePrice();
+        const sizeText = selectedSize ? ` (${selectedSize.label})` : "";
+        const priceText = effectivePrice != null ? ` for ${TD.money(effectivePrice * currentQty)}` : "";
+        const pageUrl = window.location.href;
+
+        const message = `Hi Monika! 🪔 I'd like to order from Trendy Decorum:\n\n` +
+                        `• Item: ${product.name}${sizeText}\n` +
+                        `• Quantity: ${currentQty}${priceText}\n` +
+                        `• Link: ${pageUrl}\n\n` +
+                        `Is this available for pickup in Oshawa or delivery? Thank you!`;
+
+        const waBtn = document.getElementById("btn-order-wa");
+        if (waBtn) waBtn.href = TD.waLink(message);
+      }
+
+      function wireInteractions() {
+        // Thumbnail clicks
+        const thumbs = document.getElementById("gallery-thumbs");
+        const mainImg = document.getElementById("main-image");
+        if (thumbs && mainImg) {
+          thumbs.addEventListener("click", (e) => {
+            const btn = e.target.closest("button");
+            if (!btn) return;
+            mainImg.src = btn.dataset.img;
+            thumbs.querySelectorAll("button").forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+          });
+        }
+
+        // Image zoom toggle
+        const galleryMain = document.getElementById("gallery-main");
+        if (galleryMain) {
+          galleryMain.addEventListener("click", () => {
+            galleryMain.classList.toggle("zoomed");
+          });
+        }
+
+        // Size option selection
+        const sizeContainer = document.getElementById("size-options");
+        if (sizeContainer) {
+          sizeContainer.addEventListener("click", (e) => {
+            const btn = e.target.closest(".size-opt");
+            if (!btn) return;
+            const idx = parseInt(btn.dataset.idx, 10);
+            selectedSize = product.sizes[idx];
+            sizeContainer.querySelectorAll(".size-opt").forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+
+            // Update price display
+            const priceVal = document.getElementById("pd-price-val");
+            if (priceVal) {
+              const eff = getEffectivePrice();
+              priceVal.textContent = eff != null ? TD.money(eff) : "Message for price";
+            }
+            updateWaLink();
+          });
+        }
+
+        // Qty adjusters
+        const dec = document.getElementById("qty-dec");
+        const inc = document.getElementById("qty-inc");
+        const val = document.getElementById("qty-val");
+        if (dec && inc && val) {
+          dec.addEventListener("click", () => {
+            if (currentQty > 1) {
+              currentQty--;
+              val.textContent = currentQty;
+              updateWaLink();
+            }
+          });
+          inc.addEventListener("click", () => {
+            currentQty++;
+            val.textContent = currentQty;
+            updateWaLink();
+          });
+        }
+
+        // Add to Order List button
+        const addBtn = document.getElementById("btn-add-list");
+        if (addBtn) {
+          addBtn.addEventListener("click", () => {
+            TD.orderList.add(product, selectedSize, currentQty);
+            TDUI.toast(`Added ${currentQty}× “${product.name}” to your order list`);
+          });
+        }
+      }
+
+      // Initial render
+      renderProduct();
+
+      // Related products
+      const related = allProducts
+        .filter(p => p.id !== product.id && (p.category === product.category || p.occasions.some(o => product.occasions.includes(o))))
+        .slice(0, 4);
+
+      if (related.length) {
+        const relatedSection = document.getElementById("related-section");
+        const relatedGrid = document.getElementById("related-grid");
+        relatedSection.style.display = "block";
+        TDUI.renderCards(relatedGrid, related);
+        TDUI.enableQuickAdd(relatedGrid, () => allProducts);
+      }
+    });
+  </script>
+</body>
+</html>

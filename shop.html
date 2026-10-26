@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Festive Collection | Trendy Decorum | Handcrafted Indian Décor Canada</title>
+  <meta name="description" content="Browse 100+ handcrafted Indian festive decorations: Shubh Labh hangings, door torans, marigold garlands, latkans, and return gifts. Pickup in Oshawa, shipping across Canada & USA.">
+  <link rel="icon" type="image/jpeg" href="assets/brand/favicon.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="shop">
+
+  <!-- Site Header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Trendy Decorum Home">
+        <img src="assets/brand/logo.jpg" alt="Trendy Decorum Logo" width="50" height="50">
+        <span class="brand-name">Trendy Decorum</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main Navigation">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="shop.html" data-nav="shop">Collection</a>
+        <a href="index.html#festivals">Festivals</a>
+        <a href="index.html#bulk">Bulk & Pre-Orders</a>
+        <a href="about.html" data-nav="about">Our Story</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-outline btn-sm header-wa" data-wa aria-label="Order on WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41Z"/></svg>
+          <span>Chat with Monika</span>
+        </a>
+
+        <button class="list-btn" id="open-list-btn" aria-label="View Order List">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l1 13H5L6 7Z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg>
+          <span class="list-count" data-list-count>0</span>
+        </button>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Catalogue</span>
+      </div>
+      <h1>Our Festive <em>Collection</em></h1>
+      <p>Handpicked Indian festive décor, torans, Pichwai hangings, and spiritual accents imported for Canadian celebrations.</p>
+    </div>
+  </section>
+
+  <!-- Sticky Filter / Search Toolbar -->
+  <div class="toolbar">
+    <div class="container">
+      <div class="toolbar-row">
+        <div class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="search" id="search-input" placeholder="Search torans, shubh labh, marigold, cows..." aria-label="Search products">
+        </div>
+
+        <select class="select" id="sort-select" aria-label="Sort products">
+          <option value="featured">Featured First</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="name-asc">Name: A to Z</option>
+        </select>
+      </div>
+
+      <!-- Category & Occasion Filter Chips -->
+      <div class="chips" id="category-chips" role="tablist" aria-label="Filter by Category"></div>
+    </div>
+  </div>
+
+  <!-- Products Main Grid -->
+  <main class="section section-tight" style="background: var(--cream);">
+    <div class="container">
+      <div class="results-meta">
+        <span id="results-count">Loading collection...</span>
+        <button class="reset-link" id="reset-filters" style="display: none;">Reset all filters</button>
+      </div>
+
+      <div class="product-grid" id="catalogue-grid"></div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand">
+          <img src="assets/brand/logo.jpg" alt="Trendy Decorum" width="46" height="46">
+          <span class="brand-name">Trendy Decorum</span>
+        </div>
+        <p>
+          Handcrafted Indian home décor, Pichwai hangings, festive torans, and ethnic return gifts. Handpicked from India, serving Canadian homes.
+        </p>
+        <div class="socials">
+          <a data-wa aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41Z"/></svg></a>
+          <a data-ig aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a data-tel aria-label="Phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Collection</h4>
+        <ul>
+          <li><a href="shop.html?cat=Shubh+Labh">Shubh Labh Hangings</a></li>
+          <li><a href="shop.html?cat=Torans">Festive Torans</a></li>
+          <li><a href="shop.html?cat=Door+%26+Wall+Hangings">Wall &amp; Door Latkans</a></li>
+          <li><a href="shop.html?cat=Garlands+%26+Florals">Garlands &amp; Florals</a></li>
+          <li><a href="shop.html?cat=Wall+D%C3%A9cor">Wall Accents</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Festivals</h4>
+        <ul>
+          <li><a href="shop.html?occ=Diwali">Diwali 2026 Collection</a></li>
+          <li><a href="shop.html?occ=Navratri">Navratri Garba Décor</a></li>
+          <li><a href="shop.html?occ=Karva+Chauth">Karva Chauth</a></li>
+          <li><a href="shop.html?occ=Weddings">Weddings &amp; Haldi</a></li>
+          <li><a href="index.html#bulk">Bulk &amp; Pre-Orders</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact &amp; Delivery</h4>
+        <ul>
+          <li><span>📍 Pickup: <strong data-location>Oshawa, Ontario</strong></span></li>
+          <li><span>🇨🇦 Delivery: Canada &amp; USA wide</span></li>
+          <li><a data-tel>📞 <span data-phone>(647) 781-4940</span></a></li>
+          <li><a data-ig>📸 <span data-ig-handle>@trendy_decorum</span></a></li>
+          <li><span>💳 Payment: Cash / e-Transfer</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>&copy; <span data-year>2026</span> Trendy Decorum. All rights reserved. Handcrafted with devotion.</div>
+      <div>Curated by Monika · Oshawa, Ontario, Canada</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      const grid = document.getElementById("catalogue-grid");
+      const countEl = document.getElementById("results-count");
+      const chipsEl = document.getElementById("category-chips");
+      const searchInput = document.getElementById("search-input");
+      const sortSelect = document.getElementById("sort-select");
+      const resetBtn = document.getElementById("reset-filters");
+
+      TDUI.skeletons(grid, 12);
+
+      let allProducts = [];
+      try {
+        allProducts = await TD.loadProducts();
+      } catch (err) {
+        grid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: var(--muted); padding: 40px 0;">Error loading products: ${TDUI.esc(err.message)}</p>`;
+        return;
+      }
+
+      // Read initial query params (?cat=..., ?occ=..., ?q=...)
+      const params = new URLSearchParams(window.location.search);
+      let selectedCat = params.get("cat") || "All";
+      let selectedOcc = params.get("occ") || "";
+      let searchQuery = params.get("q") || "";
+      let currentSort = "featured";
+
+      if (searchQuery) searchInput.value = searchQuery;
+
+      // Extract categories and occasion chips
+      const categories = ["All", ...new Set(allProducts.map(p => p.category).filter(Boolean))];
+
+      function buildChips() {
+        let html = categories.map(cat => {
+          const isActive = (selectedCat === cat && !selectedOcc);
+          const count = cat === "All" ? allProducts.length : allProducts.filter(p => p.category === cat).length;
+          return `<button class="chip ${isActive ? 'active' : ''}" data-cat="${TDUI.esc(cat)}">
+                    ${TDUI.esc(cat)} <span class="count">${count}</span>
+                  </button>`;
+        }).join("");
+
+        // Add special occasion filter chips
+        const popularOccasions = ["Diwali", "Navratri", "Karva Chauth", "Weddings", "Ganesh Chaturthi"];
+        popularOccasions.forEach(occ => {
+          const isActive = (selectedOcc.toLowerCase() === occ.toLowerCase());
+          const occCount = allProducts.filter(p => p.occasions.some(o => o.toLowerCase().includes(occ.toLowerCase()))).length;
+          if (occCount > 0) {
+            html += `<button class="chip ${isActive ? 'active' : ''}" data-occ="${TDUI.esc(occ)}">
+                      ✨ ${TDUI.esc(occ)} <span class="count">${occCount}</span>
+                    </button>`;
+          }
+        });
+
+        chipsEl.innerHTML = html;
+      }
+
+      function filterAndRender() {
+        const query = searchInput.value.trim().toLowerCase();
+        let filtered = allProducts.filter(p => {
+          // Category match
+          if (selectedCat !== "All" && p.category !== selectedCat) return false;
+
+          // Occasion match
+          if (selectedOcc && !p.occasions.some(o => o.toLowerCase().includes(selectedOcc.toLowerCase()))) return false;
+
+          // Search match
+          if (query) {
+            const haystack = `${p.name} ${p.category} ${p.description} ${p.occasions.join(" ")}`.toLowerCase();
+            return haystack.includes(query);
+          }
+          return true;
+        });
+
+        // Sorting
+        if (currentSort === "price-asc") {
+          filtered.sort((a, b) => (a.price ?? 9999) - (b.price ?? 9999));
+        } else if (currentSort === "price-desc") {
+          filtered.sort((a, b) => (b.price ?? 0) - (a.price ?? 0));
+        } else if (currentSort === "name-asc") {
+          filtered.sort((a, b) => a.name.localeCompare(b.name));
+        } else {
+          // Featured default
+          filtered.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
+        }
+
+        // Render meta text
+        let filterLabel = [];
+        if (selectedCat !== "All") filterLabel.push(`Category: "${selectedCat}"`);
+        if (selectedOcc) filterLabel.push(`Occasion: "${selectedOcc}"`);
+        if (query) filterLabel.push(`Search: "${query}"`);
+
+        countEl.textContent = `Showing ${filtered.length} product${filtered.length === 1 ? '' : 's'}` + (filterLabel.length ? ` (${filterLabel.join(", ")})` : '');
+        resetBtn.style.display = filterLabel.length ? "inline-block" : "none";
+
+        // Render grid or empty state
+        if (!filtered.length) {
+          grid.innerHTML = `
+            <div class="empty-state">
+              <div class="big">🪔</div>
+              <h3>No decorations match your search</h3>
+              <p>Try clearing filters or search for something else like "shubh labh", "toran", or "peacock".</p>
+              <button class="btn btn-outline" id="clear-filters-btn">Clear All Filters</button>
+            </div>`;
+          document.getElementById("clear-filters-btn")?.addEventListener("click", resetAll);
+        } else {
+          TDUI.renderCards(grid, filtered);
+        }
+      }
+
+      function resetAll() {
+        selectedCat = "All";
+        selectedOcc = "";
+        searchInput.value = "";
+        currentSort = "featured";
+        sortSelect.value = "featured";
+        history.replaceState(null, "", "shop.html");
+        buildChips();
+        filterAndRender();
+      }
+
+      // Event listeners
+      chipsEl.addEventListener("click", (e) => {
+        const btn = e.target.closest(".chip");
+        if (!btn) return;
+
+        if (btn.dataset.cat) {
+          selectedCat = btn.dataset.cat;
+          selectedOcc = "";
+        } else if (btn.dataset.occ) {
+          selectedOcc = btn.dataset.occ;
+          selectedCat = "All";
+        }
+        buildChips();
+        filterAndRender();
+      });
+
+      searchInput.addEventListener("input", () => filterAndRender());
+      sortSelect.addEventListener("change", (e) => {
+        currentSort = e.target.value;
+        filterAndRender();
+      });
+      resetBtn.addEventListener("click", resetAll);
+
+      // Enable quick-add for all cards rendered in grid
+      TDUI.enableQuickAdd(grid, () => allProducts);
+
+      // Initial build & render
+      buildChips();
+      filterAndRender();
+    });
+  </script>
+</body>
+</html>

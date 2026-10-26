@@ -1,0 +1,6 @@
+# Clean URL redirects for Netlify
+/shop              /shop.html           200
+/about             /about.html          200
+/contact           /contact.html        200
+/festivals         /#festivals          301
+/bulk              /#bulk               301
