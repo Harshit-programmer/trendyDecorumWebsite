@@ -64,11 +64,16 @@
 
   // "Single - $15 | Pair - $28"  →  [{label:"Single", price:15}, {label:"Pair", price:28}]
   function parseSizes(raw, basePrice) {
-    return splitList(raw, /\||\n|;/).map((part) => {
+    const parsed = splitList(raw, /\||\n|;/).map((part) => {
       const m = part.match(/^(.*?)\s*[-:=–—]\s*\$?\s*(\d+(?:\.\d+)?)\s*$/);
       if (m && m[1]) return { label: m[1].trim(), price: parseFloat(m[2]) };
       return { label: part, price: basePrice };
     });
+    // If there is only one size option and basePrice is set, keep them in sync
+    if (parsed.length === 1 && basePrice != null) {
+      parsed[0].price = basePrice;
+    }
+    return parsed;
   }
 
   function normalize(obj, index) {
@@ -79,7 +84,10 @@
     const basePrice = toNumber(obj.price);
     const sizes = parseSizes(obj.sizes || obj.size_prices || obj.variants, basePrice);
     const priced = sizes.filter((s) => s.price != null).map((s) => s.price);
-    const price = priced.length ? Math.min(...priced) : basePrice;
+    // If only one size or no sizes, basePrice takes priority
+    const price = (sizes.length <= 1 && basePrice != null)
+      ? basePrice
+      : (priced.length ? Math.min(...priced) : basePrice);
     const images = splitList(obj.images || obj.image || obj.photos || obj.photo, /\||\n|,(?=\s*(?:https?:|assets\/|\/))/).map(imageUrl).filter(Boolean);
 
     return {
@@ -100,7 +108,10 @@
   }
 
   async function fetchText(url) {
-    const res = await fetch(url, { cache: "no-cache" });
+    // Add cachebuster to bypass Google CDN and browser caching
+    const sep = url.includes("?") ? "&" : "?";
+    const cacheBusted = url + sep + "_t=" + Date.now();
+    const res = await fetch(cacheBusted, { cache: "no-cache" });
     if (!res.ok) throw new Error("HTTP " + res.status + " for " + url);
     const text = await res.text();
     if (/^\s*</.test(text)) throw new Error("Got a web page instead of CSV — is the sheet published as CSV?");
